@@ -1,0 +1,10 @@
+{
+    "Name":  "Low Consuming Discord",
+    "Repository":  "https://github.com/TaWADAaaa/low-consuming-discord",
+    "DescriptionES":  "Parches abiertos para simplificar Discord en Windows: menos decoraciÃ³n, foco visible y recursos propios. Experimental; presupuesto RAM/CPU sin demostrar.",
+    "DescriptionEN":  "Open patches to simplify Discord on Windows: less decoration, visible focus and original assets. Experimental; RAM/CPU budget remains unverified.",
+    "Downloads":  "https://github.com/TaWADAaaa/low-consuming-discord/releases",
+    "Executable":  "DiscordTawop.exe",
+    "Version":  "0.3.0-experimental",
+    "MemoryTargetVerified":  false
+}
