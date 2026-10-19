@@ -30,7 +30,7 @@ Work runs away from the GUI event loop. The main button becomes Stop while busy;
 
 Every EXE embeds discord/tawop.css, discord/preload.js and steam/tawop.css. A complete external assets folder takes precedence for explicit customization. An incomplete folder is rejected rather than mixing versions.
 
-Without external assets, resources are extracted under %LOCALAPPDATA%\TawopModKit\assets\0.5.0-<hash16>. SHA256 hashes are checked when creating and reusing them. A mutex coordinates concurrent preparation; temporary files are moved into place. Links, absent resources and files beyond the size limit are rejected. Modified cache files are preserved and reported, not overwritten.
+Without external assets, resources are extracted under %LOCALAPPDATA%\TawopModKit\assets\0.5.0-<hash16>. Versions 0.5.0 and 0.5.1 share this resource bundle. SHA256 hashes are checked when creating and reusing them. A mutex coordinates concurrent preparation; temporary files are moved into place. Links, absent resources and files beyond the size limit are rejected. Modified cache files are preserved and reported, not overwritten.
 
 ## Backups and recovery
 
@@ -41,6 +41,8 @@ A failure triggers attempted rollback. A lock or external change can prevent com
 ## Client modules
 
 Discord reconstructs supported ASAR files after verifying paths, offsets, payload and SHA256 blocks. Recognized CSS and main-process structure receive original styles and a preload. The client EXE and Electron integrity fuses are never patched. Unknown formats or enforced embedded ASAR integrity stop the operation.
+
+AsarArchive.Read retains the supplied byte array and aliases unchanged members to avoid allocating another full payload copy. A caller must not mutate that input for the archive object's lifetime. GetFile returns a defensive copy, and SetFile clones the replacement bytes. The patch engine keeps its input buffer private. See the [patcher benchmark](PATCHER-BENCHMARK.md) for allocation measurements; those are separate from running-client memory.
 
 Discord's initial BrowserWindow preferences disable image animation and built-in spellcheck. Image animation suppression applies to GIF, APNG and animated WebP images, including message images. The existing request dispatcher receives an original policy for exact recognized decorative CDN routes and static small avatar/icon/emoji forms. It does not replace Electron's request listener, authentication, APIs, attachments, voice or streaming protocols. Supported anchors are required before a change is prepared. [Electron preferences](https://www.electronjs.org/docs/latest/api/structures/web-preferences) and [request API](https://www.electronjs.org/docs/latest/api/web-request).
 
