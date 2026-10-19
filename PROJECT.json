@@ -1,9 +1,9 @@
 {
     "Name":  "Low Consuming Discord",
     "Repository":  "https://github.com/TaWADAaaa/low-consuming-discord",
-    "DescriptionEN":  "Simple English one-button patch tool for Discord on Windows. Automatic detection, verified backups and undo. Experimental; memory savings unverified.",
+    "DescriptionEN":  "Aggressive Discord resource policies for Windows: static smaller decorative images, no image animation or spellcheck, backup, undo and Stop. Experimental; savings unverified.",
     "Downloads":  "https://github.com/TaWADAaaa/low-consuming-discord/releases",
     "Executable":  "DiscordTawop.exe",
-    "Version":  "0.4.0-experimental",
+    "Version":  "0.5.0-experimental",
     "MemoryTargetVerified":  false
 }

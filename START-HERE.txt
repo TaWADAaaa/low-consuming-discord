@@ -6,8 +6,13 @@ LOW CONSUMING Discord - START HERE
 
 The tool finds a supported Discord installation, checks its files, requests normal closure, saves a backup and applies changes. It reopens Discord if it was running. If it stays in the tray, use Quit Discord there and click the main button again.
 
-Undo changes restores verified originals. Keep the .tawop backup folder.
-Choose a different folder is only needed if detection needs help. Details explains failures.
+While busy, the main button becomes Stop. Click it once and wait for safe cancellation or recovery. Closing the window also requests Stop. Keep the .tawop backup folder.
+
+Aggressive tradeoffs: image animations become still, spellcheck is disabled, recognized decorative media are blocked or simplified. Undo changes restores verified originals. Choose a different folder is only needed if detection needs help. Details explains failures.
+
+Need to stop? The main button changes to Stop while the tool is busy.
+Click it once and wait. Closing the window also requests a safe stop.
+If recovery is needed, let it finish before closing the tool.
 
 You do not need CMD, PowerShell or an account in this tool to open the release EXE.
 Developer files are included for review and rebuilding.

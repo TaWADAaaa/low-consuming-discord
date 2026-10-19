@@ -1,13 +1,13 @@
 ﻿{
-    "Version":  "0.4.0",
+    "Version":  "0.5.0",
     "SelectedProduct":  "Discord",
-    "BuiltUtc":  "2026-10-19T03:24:00.7377144Z",
+    "BuiltUtc":  "2026-10-19T05:18:14.3222422Z",
     "Compiler":  "4.8.9221.0 built by: NET481REL1LAST_25H2",
     "Executables":  [
                         {
                             "Name":  "DiscordTawop.exe",
-                            "Bytes":  86016,
-                            "SHA256":  "20AC2B321C429AB0468B1E9F19F457AB3A7EABA07C1E1422D5E7A0D1FFB90A93",
+                            "Bytes":  125440,
+                            "SHA256":  "F851A94AF7D7815A67FCB159E49BFC7C3C72742A0296B433A9191688B4EBE48B",
                             "Kind":  "local patch tool; not a replacement client"
                         }
                     ],
